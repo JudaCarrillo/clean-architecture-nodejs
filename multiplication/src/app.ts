@@ -1,4 +1,4 @@
-import { yarg } from "./config/plugins/args.adapter";
+import { yarg } from "./config/adapters/args.adapter";
 
 // console.log(process.argv);
 // console.log(yarg.b);
