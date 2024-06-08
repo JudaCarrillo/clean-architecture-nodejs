@@ -7,11 +7,19 @@ import { ServerApp } from "./presentation/server-app";
 })();
 
 async function main() {
-  const { b: base, l: limit, s: displayTable } = yarg;
+  const {
+    b: base,
+    l: limit,
+    s: displayTable,
+    d: fileDestination,
+    n: fileName,
+  } = yarg;
 
   ServerApp.run({
     base,
     limit,
     displayTable,
+    fileDestination,
+    fileName,
   });
 }
