@@ -1,7 +1,5 @@
 import { yarg } from "./config/adapters/args.adapter";
-
-// console.log(process.argv);
-// console.log(yarg.b);
+import { ServerApp } from "./presentation/server-app";
 
 // * anonymous function - self invoking
 (async () => {
@@ -9,5 +7,11 @@ import { yarg } from "./config/adapters/args.adapter";
 })();
 
 async function main() {
-  console.log(yarg);
+  const { b: base, l: limit, s: displayTable } = yarg;
+
+  ServerApp.run({
+    base,
+    limit,
+    displayTable,
+  });
 }
