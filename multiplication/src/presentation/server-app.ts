@@ -4,7 +4,7 @@ import { SaveFile } from "../domain/use-cases/save-file.use-case";
 interface RunOptions {
   base: number;
   limit: number;
-  displayTable: boolean;
+  showTable: boolean;
   fileDestination: string;
   fileName: string;
 }
@@ -13,7 +13,7 @@ export class ServerApp {
   static run({
     base,
     limit,
-    displayTable,
+    showTable,
     fileDestination,
     fileName,
   }: RunOptions) {
@@ -27,7 +27,7 @@ export class ServerApp {
       fileDestination,
     });
 
-    if (displayTable) console.log(table);
+    if (showTable) console.log(table);
 
     wasCreated
       ? console.log("File created!")

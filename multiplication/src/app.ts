@@ -10,7 +10,7 @@ async function main() {
   const {
     b: base,
     l: limit,
-    s: displayTable,
+    s: showTable,
     d: fileDestination,
     n: fileName,
   } = yarg;
@@ -18,7 +18,7 @@ async function main() {
   ServerApp.run({
     base,
     limit,
-    displayTable,
+    showTable,
     fileDestination,
     fileName,
   });

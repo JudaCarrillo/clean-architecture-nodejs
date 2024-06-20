@@ -7,14 +7,14 @@ This is a multiplication application that generates and displays a table of mult
 You can run the application locally by following these steps:
 
 ```bash
-npm run ts-node src/app.ts -b {base} -l {limit} -d {displayTable} -f {fileDestination} -n {fileName}
+npm run ts-node src/app.ts -b {base} -l {limit} -s {showTable} -f {fileDestination} -n {fileName}
 ```
 
 ### Parameters
 
 - `-b`, `--base`: Base of the table of multiplication (required).
 - `-l`, `--limit`: The limit until where you want to multiply (optional, default is 10).
-- `-d`, `--displayTable`: Indicates if you want to display the table in the console (optional, default is true).
+- `-s`, `--showTable`: Indicates if you want to display the table in the console (optional, default is true).
 - `-f`, `--fileDestination`: Path to the directory where you want to save the file (optional).
 - `-n`, `--fileName`: File name where you want to save the table (optional).
 

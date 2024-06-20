@@ -9,14 +9,18 @@ export interface SaveFileUseCase {
 
 export interface Options {
   fileContent: string;
-  fileDestination: string;
-  fileName: string;
+  fileDestination?: string;
+  fileName?: string;
 }
 
 export class SaveFile implements SaveFileUseCase {
   constructor() {} // repository: StorageRepository,
 
-  execute({ fileContent, fileName, fileDestination }: Options) {
+  execute({
+    fileContent,
+    fileName = DEFAULT_FILE_NAME,
+    fileDestination = DEFAULT_FILE_DESTINATION,
+  }: Options) {
     {
       try {
         fs.mkdirSync(fileDestination, { recursive: true });
