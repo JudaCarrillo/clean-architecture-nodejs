@@ -2,9 +2,33 @@
 
 ## Run locally
 
+### Clone the repository
+
 ```bash
 git clone https://github.com/JudaCarrillo/clean-architecture-nodejs.git
+```
+
+### Install dependencies
+
+```bash
+cd clean-architecture-nodejs/noc
 npm install
+```
+
+### Create .env file and set environment variables
+
+```bash
+PORT=3000
+
+MAILER_EMAIL=noreply@example.com
+MAILER_SECRET_EMAIL=secret
+
+PROD=false
+```
+
+### Run the application
+
+```bash
 npm run dev
 ```
 
@@ -18,10 +42,3 @@ npm run dev
 - JSON-Server
 - Use Cases
 - CRON task
-
-## Layers
-- Entities: LogEntity 
-- Use Cases: Save logs, Read logs, Send emails 
-- Presenters: Console
-- DataBase: FileSystem, MongoDB, PostgreSQL
-
