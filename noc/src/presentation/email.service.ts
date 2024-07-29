@@ -1,5 +1,7 @@
 import nodemailer from "nodemailer";
 import { envs } from "../config/plugins/env.plugins";
+import { LogRepository } from "../domain/repository/log.repository";
+import { LogEntity, LogSeverityLevel } from "../domain/entities/log.entity";
 
 export interface SendMailOptions {
   to: string | string[];
@@ -32,8 +34,6 @@ export class EmailService {
         html: htmlBody,
         attachments: attachments,
       });
-
-      console.log(sentInformation);
 
       return true;
     } catch (e) {
